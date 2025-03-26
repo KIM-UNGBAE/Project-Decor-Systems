@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <script src="./assets/js/selite.js"></script>
+
+    <script src="./assets/js/layout.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</head>
+<body>
+    
+    <header class="header">
+        <div class="inner">
+            <nav class="gnb">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <h1 class="logo">
+                            <a href="" class="logo">
+                                <span class="blind">DECOR SYSTEMS 로고</span>
+                                <svg width="105" height="26" viewBox="0 0 105 26" fill="none" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><path d="M44.3672 6.12227C44.3672 2.63764 42.7203 0.260498 39.249 0.260498H35.051V11.9032H39.136C42.6073 11.9032 44.3672 9.60729 44.3672 6.12227ZM36.5043 10.6168V1.53054H39.2006C41.9131 1.53054 42.8818 3.38698 42.8818 6.12227C42.8818 8.85834 41.8001 10.6168 39.0876 10.6168H36.5043Z" fill="currentColor"></path><path d="M54.3599 10.5515H47.4657V6.46447H53.5525V5.22671H47.4657V1.54687H54.1662V0.260498H46.0125V11.9032H54.3599V10.5515Z" fill="currentColor"></path><path d="M60.7035 12.1311C62.1729 12.1311 63.3514 11.708 64.1588 10.91C64.9822 10.0958 65.5313 8.79305 65.5473 7.63695H64.1104C63.9651 9.34679 62.9317 10.8447 60.7521 10.8447C58.3463 10.8447 56.7801 8.92332 56.7801 6.0737C56.7801 3.33803 58.2009 1.27004 60.7359 1.27004C62.5604 1.27004 63.7067 2.2632 63.9813 3.71251H65.4021C65.0952 1.56324 63.4646 0 60.7681 0C57.329 0 55.2947 2.65401 55.2947 6.0737C55.2947 9.60733 57.4259 12.1311 60.7035 12.1311Z" fill="currentColor"></path><path d="M77.9615 6.07371C77.9615 2.58907 75.7979 0 72.3104 0C68.8229 0 66.6594 2.58907 66.6594 6.07371C66.6594 9.55834 68.8229 12.1474 72.3104 12.1474C75.7979 12.1474 77.9615 9.55834 77.9615 6.07371ZM72.3104 10.861C69.5979 10.861 68.1448 8.80938 68.1448 6.07371C68.1448 3.33803 69.5979 1.27004 72.3104 1.27004C75.0229 1.27004 76.4761 3.33803 76.4761 6.07371C76.4761 8.80938 75.0229 10.861 72.3104 10.861Z" fill="currentColor"></path><path d="M81.0592 6.98555H84.2722C85.8222 6.98555 86.5002 7.58791 86.6134 9.29775C86.7425 11.2518 86.7909 11.6916 87.0331 11.9032H88.5993V11.8378C88.3893 11.6916 88.1956 11.2191 88.0664 9.34675C87.9534 7.62057 87.5821 6.80629 86.4034 6.38281V6.3342C87.7919 5.87806 88.4055 4.86857 88.4055 3.45193C88.4055 1.54687 87.0331 0.260498 84.9988 0.260498H79.606V11.9032H81.0592V6.98555ZM81.0592 1.53054H84.5627C86.2581 1.53054 86.9039 2.24683 86.9039 3.66347C86.9039 4.9825 86.0967 5.79679 84.4821 5.79679H81.0592V1.53054Z" fill="currentColor"></path><path d="M39.2009 18.9653C37.4733 18.6235 36.1816 18.2327 36.1816 16.9137C36.1816 15.7086 37.215 15.0409 38.7812 15.0409C40.4763 15.0409 41.5421 15.8715 41.752 17.5324H43.1243C42.8337 15.3831 41.6388 13.9011 38.7488 13.9011C36.4076 13.9011 34.8254 15.0572 34.8254 16.979C34.8254 19.1773 36.5691 19.7633 38.6034 20.2194C40.6701 20.6752 42.0587 21.0497 42.0587 22.6456C42.0587 24.0949 40.9122 24.8275 39.3138 24.8275C37.1342 24.8275 35.9395 23.8017 35.7455 21.8313H34.3247C34.4539 24.1761 36.0039 25.9999 39.2492 25.9999C41.7358 25.9999 43.4956 24.7789 43.4956 22.5966C43.4956 19.9748 41.4451 19.4215 39.2009 18.9653Z" fill="currentColor"></path><path d="M51.8253 14.1292L48.467 19.6658H48.4346L45.1246 14.1292H43.5103L47.692 20.8383V25.7722H49.145V20.8709L53.3753 14.1292H51.8253Z" fill="currentColor"></path><path d="M58.2009 18.9653C56.4733 18.6235 55.1816 18.2327 55.1816 16.9137C55.1816 15.7086 56.215 15.0409 57.7812 15.0409C59.4763 15.0409 60.5421 15.8715 60.752 17.5324H62.1243C61.8337 15.3831 60.6388 13.9011 57.7488 13.9011C55.4076 13.9011 53.8254 15.0572 53.8254 16.979C53.8254 19.1773 55.5691 19.7633 57.6034 20.2194C59.6701 20.6752 61.0587 21.0497 61.0587 22.6456C61.0587 24.0949 59.9122 24.8275 58.3138 24.8275C56.1342 24.8275 54.9395 23.8017 54.7455 21.8313H53.3247C53.4539 24.1761 55.0039 25.9999 58.2493 25.9999C60.7358 25.9999 62.4956 24.7789 62.4956 22.5966C62.4956 19.9748 60.4451 19.4215 58.2009 18.9653Z" fill="currentColor"></path><path d="M62.7849 15.4159H66.6277V25.7722H68.0808V15.4159H71.9236V14.1292H62.7849V15.4159Z" fill="currentColor"></path><path d="M74.7311 20.3335H80.8179V19.0958H74.7311V15.4159H81.4315V14.1292H73.2778V25.7722H81.6253V24.4205H74.7311V20.3335Z" fill="currentColor"></path><path d="M88.8732 23.8018H88.8411L85.0952 14.1292H83.2383V25.7722H84.5461V16.1975H84.5785C84.5785 16.1975 84.8691 17.0768 85.0952 17.6628L88.2596 25.7722H89.3737L92.5383 17.6628C92.7483 17.109 93.055 16.1975 93.055 16.1975H93.0874V25.7722H94.4758V14.1292H92.5869L88.8732 23.8018Z" fill="currentColor"></path><path d="M100.706 18.9653C98.978 18.6235 97.6863 18.2327 97.6863 16.9137C97.6863 15.7086 98.7197 15.0409 100.286 15.0409C101.981 15.0409 103.047 15.8715 103.256 17.5324H104.629C104.338 15.3831 103.144 13.9011 100.253 13.9011C97.9123 13.9011 96.3301 15.0572 96.3301 16.979C96.3301 19.1773 98.0738 19.7633 100.108 20.2194C102.175 20.6752 103.563 21.0497 103.563 22.6456C103.563 24.0949 102.417 24.8275 100.819 24.8275C98.6389 24.8275 97.444 23.8017 97.2504 21.8313H95.8296C95.9588 24.1761 97.5088 25.9999 100.754 25.9999C103.24 25.9999 105 24.7789 105 22.5966C105 19.9748 102.95 19.4215 100.706 18.9653Z" fill="currentColor"></path><path d="M25.7073 12.2605H25.7348V0H12.8674V0.0280609C19.7247 0.0280609 25.327 5.44059 25.7073 12.2605Z" fill="currentColor"></path><path d="M25.7078 13.7395C25.3275 20.5594 19.7252 25.9719 12.8679 25.9719V26H25.7353V13.7395H25.7078Z" fill="currentColor"></path><path d="M12.8399 12.2605H12.8674V0H0V0.0280609C6.85726 0.0280609 12.4596 5.44059 12.8399 12.2605Z" fill="currentColor"></path><path d="M12.8399 13.7395C12.4596 20.5594 6.85726 25.9719 0 25.9719V26H12.8674V13.7395H12.8399Z" fill="currentColor"></path></svg>
+                            </a>
+                        </h1>
+                    </li>
+                    <li class="nav-item gnb-item">
+                        <a href="" class="nav"><span class="nav-text">projects</span></a>
+                    </li>
+                    <li class="nav-item gnb-item">
+                        <a href="" class="nav"><span class="nav-text">products</span></a>
+                    </li>
+                    <li class="nav-item gnb-item">
+                        <a href="" class="nav"><span class="nav-text">resources</span></a>
+                    </li>
+                    <li class="nav-item gnb-item">
+                        <a href="" class="nav"><span class="nav-text">about</span></a>
+                    </li>
+                    <li class="nav-item gnb-item">
+                        <a href="" class="nav"><span class="nav-text">contact</span></a>
+                    </li>
+                    <li class="nav-item gnb-item">
+                        <a href="" class="nav">
+                            <span class="nav-text">samples</span>
+                            <span class="count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-item">
+                        <button class="btn-menu" type="button" aria-label="확장메뉴 열고 닫기">
+                            <div class="menu-area">
+                                <span class="menu">menu</span>
+                                <span class="close">close</span>
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="side-gnb">
+                <div class="inner">
+                    <p class="title">Menu</p>
+                </div>
+
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="">
+                            <span>Projects</span>
+                            <span class="count">87</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <span>Products</span>
+                            <span class="count">32</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <span>Resources</span>
+                            <span class="count">10</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href=""><span>About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href=""><span>Contact</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <span>Samples</span>
+                            <span class="count">02</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- @건축 음향솔루션 section1 -->
+        <section class="section1">
+            <div class="group-headline">
+                <h2 class="headline">
+                    <span class="headline-text headline-text1">ARCHITECTURAL</span>
+                    <span class="headline-text headline-text2">ACOUSTIC SOLUTIONS</span>
+                    <span class="headline-text headline-text3">ARCHITECTURALACOUSTIC</span>
+                    <span class="headline-text headline-text4">SOLUTIONS</span>
+                </h2>
+
+                <div class="line-area">
+                    <div class="col-line"></div>
+                    <div class="col-line"></div>
+                    <div class="col-line"></div>
+                    <div class="col-line"></div>
+                    <div class="col-line"></div>
+                    <div class="col-line"></div>
+                </div>
+
+                <div class="text-area">
+                    <div class="text-wrap">
+                        <p class="desc1">We help architects sculpt sound out of space, with bespoke, acoustic solutions.</p>
+                    </div>
+    
+                    <span class="desc2">Built to spec</span>
+                    <span class="desc2 desc3">Indigenous Owned Since. 1972<br>Supply Nation Certified</span>
+                    <img src="./assets/images/section1_img1.png" alt="Suply Nation Certified">
+    
+                    <button class="btn-all" aria-label="더 보기">
+                        Products
+                        <span class="arrow">
+                            <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                            <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="group-img">
+                <img src="./assets/images/section1_img2.webp" alt>
+                <div class="text-wrap">
+                    <span class="text1">Flinders University</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- @선정 작품 section2 -->
+        <section class="section section2">
+            <div class="inner">
+                <div class="group-headline">
+                    <h2 class="headline">SELECTED WORKS</h2>
+
+                    <div class="desc-area">
+                        <div class="desc-wrap">
+                            <p class="desc">Our inspired solutions have helped shape modern acoustic design. Alluring spaces, internationally recognised for their architectural elegance and exceptional sound management live here.</p>
+                        </div>
+                        <button class="btn-all" aria-label="더 보기">
+                            <span class="btn-text btn-text1">View All</span>
+                            <span class="btn-text btn-text2">Works</span>
+                            <span class="arrow">
+                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-content">
+                <ul class="content-list">
+                    <li class="content-item">
+                        <div class="content-area1">
+                            <div class="title-wrap">
+                                <span class="text1">Project</span>
+                                <a href="">Flinders University Fit Out - Festival One Tower</a>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="text-box text-box1">
+                                    <span class="text1">Category</span>
+                                    <span class="text2">Office Fitouts</span>
+                                    </div>
+                                <div class="text-box text-box2">
+                                    <span class="text1">Architect</span>
+                                    <span class="text2">Crest Interiors</span>
+                                </div>
+                                <div class="control-box control-box1">
+                                    <div class="fraction">
+                                        <span class="text1">Images</span>
+                                        <span class="text3"><span class="curr">99</span>/<span class="total">99</span></span>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button class="btn-all prev">
+                                            <span class="arrow">
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                            </span>
+                                        </button>
+                                        <button class="btn-all next">
+                                            <span class="arrow">
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-area2">
+                            <div class="swiper sc2-slide sc2-slide1 ">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img1.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img2.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img3.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img4.webp" alt>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <div class="content-area1">
+                            <div class="title-wrap">
+                                <span class="text1">Project</span>
+                                <a href="">Brisbane Grammar School STEAM Precinct</a>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="text-box text-box1">
+                                    <span class="text1">Category</span>
+                                    <span class="text2">Education</span>
+                                    </div>
+                                <div class="text-box text-box2">
+                                    <span class="text1">Architect</span>
+                                    <span class="text2">Wilson Architects</span>
+                                </div>
+                                <div class="control-box control-box2">
+                                    <div class="fraction">
+                                        <span class="text1">Images</span>
+                                        <span class="text3"><span class="curr">99</span>/<span class="total">99</span></span>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button class="btn-all prev">
+                                            <span class="arrow">
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                            </span>
+                                        </button>
+                                        <button class="btn-all next">
+                                            <span class="arrow">
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-area2">
+                            <div class="swiper sc2-slide sc2-slide2">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img5.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img6.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img7.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img8.webp" alt>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <div class="content-area1">
+                            <div class="title-wrap">
+                                <span class="text1">Project</span>
+                                <a href="">Coffs Harbour Jetty Foreshore Precinct Community Building</a>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="text-box text-box1">
+                                    <span class="text1">Category</span>
+                                    <span class="text2">Arts and Community</span>
+                                </div>
+                                <div class="text-box text-box2">
+                                    <span class="text1">Architect</span>
+                                    <span class="text2">King + Campbell</span>
+                                </div>
+                                <div class="control-box control-box3">
+                                    <div class="fraction">
+                                        <span class="text1">Images</span>
+                                        <span class="text3"><span class="curr">99</span>/<span class="total">99</span></span>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button class="btn-all prev">
+                                            <span class="arrow">
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                            </span>
+                                        </button>
+                                        <button class="btn-all next">
+                                            <span class="arrow">
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-area2">
+                            <div class="swiper sc2-slide sc2-slide3">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img9.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img10.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img11.webp" alt>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="">
+                                            <img src="./assets/images/section2_img12.webp" alt>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- @전문가의 신속한 조언 section3 -->
+        <section class="section section3">
+            <div class="inner">
+                <div class="group-headline">
+                    <h2 class="headline">SPECIALIST ADVICE AT SPEED</h2>
+
+                    <div class="desc-area">
+                        <div class="desc-wrap">
+                            <p class="desc">Need a quick response? Our sales consultants are ready to help, when you need it.</p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <button class="btn-all btn-all1" aria-label="더 보기">
+                                <span class="btn-text btn-text1">Call</span>
+                                <span class="btn-text btn-text2">1800 835 035</span>
+                                <span class="arrow">
+                                    <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                    <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                </span>
+                            </button>
+                            <button class="btn-all btn-all2" aria-label="더 보기">
+                                <span class="btn-text btn-text1">Email</span>
+                                <span class="btn-text btn-text2">letstalk@decorsystems.com.au</span>
+                                <span class="arrow">
+                                    <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                    <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-content">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 400" width="1440" height="400" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><clipPath id="__lottie_element_2"><rect width="1440" height="400" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_2)"><g style="display: block;" transform="matrix(1,0,0,1,0,100.24200439453125)" opacity="1"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M423,0 C150,0 169.08700561523438,294.25799560546875 0,294.25799560546875 C0,294.25799560546875 0,299.75799560546875 0,299.75799560546875 C0,299.75799560546875 1440,299.75799560546875 1440,299.75799560546875 C1440,299.75799560546875 1440,294.25799560546875 1440,294.25799560546875 C978.0609741210938,255.40199279785156 696,0 423,0z"></path></g><g style="display: block;" transform="matrix(1,0,0,1,0,96.00000762939453)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,227,83.36299896240234)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M5,0 C5,-2.760999917984009 2.760999917984009,-5 0,-5 C-2.760999917984009,-5 -5,-2.760999917984009 -5,0 C-5,2.760999917984009 -2.760999917984009,5 0,5 C2.760999917984009,5 5,2.760999917984009 5,0z"></path></g><g opacity="1" transform="matrix(1,0,0,1,227,83.36299896240234)"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M5,0 C5,-2.760999917984009 2.760999917984009,-5 0,-5 C-2.760999917984009,-5 -5,-2.760999917984009 -5,0 C-5,2.760999917984009 -2.760999917984009,5 0,5 C2.760999917984009,5 5,2.760999917984009 5,0z M0,4 C2.2090001106262207,4 4,2.2090001106262207 4,0 C4,0 6,0 6,0 C6,3.313999891281128 3.313999891281128,6 0,6 C0,6 0,4 0,4z M-4,0 C-4,2.2090001106262207 -2.2090001106262207,4 0,4 C0,4 0,6 0,6 C-3.313999891281128,6 -6,3.313999891281128 -6,0 C-6,0 -4,0 -4,0z M0,-4 C-2.2090001106262207,-4 -4,-2.2090001106262207 -4,0 C-4,0 -6,0 -6,0 C-6,-3.313999891281128 -3.313999891281128,-6 0,-6 C0,-6 0,-4 0,-4z M4,0 C4,-2.2090001106262207 2.2090001106262207,-4 0,-4 C0,-4 0,-6 0,-6 C3.313999891281128,-6 6,-3.313999891281128 6,0 C6,0 4,0 4,0z"></path></g></g><g style="display: block;" transform="matrix(1,0,0,1,0,96)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,429,5)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M5,0 C5,-2.760999917984009 2.760999917984009,-5 0,-5 C-2.760999917984009,-5 -5,-2.760999917984009 -5,0 C-5,2.760999917984009 -2.760999917984009,5 0,5 C2.760999917984009,5 5,2.760999917984009 5,0z"></path></g><g opacity="1" transform="matrix(1,0,0,1,429,5)"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M5,0 C5,-2.760999917984009 2.760999917984009,-5 0,-5 C-2.760999917984009,-5 -5,-2.760999917984009 -5,0 C-5,2.760999917984009 -2.760999917984009,5 0,5 C2.760999917984009,5 5,2.760999917984009 5,0z M0,4 C2.2090001106262207,4 4,2.2090001106262207 4,0 C4,0 6,0 6,0 C6,3.313999891281128 3.313999891281128,6 0,6 C0,6 0,4 0,4z M-4,0 C-4,2.2090001106262207 -2.2090001106262207,4 0,4 C0,4 0,6 0,6 C-3.313999891281128,6 -6,3.313999891281128 -6,0 C-6,0 -4,0 -4,0z M0,-4 C-2.2090001106262207,-4 -4,-2.2090001106262207 -4,0 C-4,0 -6,0 -6,0 C-6,-3.313999891281128 -3.313999891281128,-6 0,-6 C0,-6 0,-4 0,-4z M4,0 C4,-2.2090001106262207 2.2090001106262207,-4 0,-4 C0,-4 0,-6 0,-6 C3.313999891281128,-6 6,-3.313999891281128 6,0 C6,0 4,0 4,0z"></path></g></g><g style="display: block;" transform="matrix(1,0,0,1,0,96.00000762939453)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,834,126.36299896240234)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M5,0 C5,-2.760999917984009 2.760999917984009,-5 0,-5 C-2.760999917984009,-5 -5,-2.760999917984009 -5,0 C-5,2.760999917984009 -2.760999917984009,5 0,5 C2.760999917984009,5 5,2.760999917984009 5,0z"></path></g><g opacity="1" transform="matrix(1,0,0,1,834,126.36299896240234)"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M5,0 C5,-2.760999917984009 2.760999917984009,-5 0,-5 C-2.760999917984009,-5 -5,-2.760999917984009 -5,0 C-5,2.760999917984009 -2.760999917984009,5 0,5 C2.760999917984009,5 5,2.760999917984009 5,0z M0,4 C2.2090001106262207,4 4,2.2090001106262207 4,0 C4,0 6,0 6,0 C6,3.313999891281128 3.313999891281128,6 0,6 C0,6 0,4 0,4z M-4,0 C-4,2.2090001106262207 -2.2090001106262207,4 0,4 C0,4 0,6 0,6 C-3.313999891281128,6 -6,3.313999891281128 -6,0 C-6,0 -4,0 -4,0z M0,-4 C-2.2090001106262207,-4 -4,-2.2090001106262207 -4,0 C-4,0 -6,0 -6,0 C-6,-3.313999891281128 -3.313999891281128,-6 0,-6 C0,-6 0,-4 0,-4z M4,0 C4,-2.2090001106262207 2.2090001106262207,-4 0,-4 C0,-4 0,-6 0,-6 C3.313999891281128,-6 6,-3.313999891281128 6,0 C6,0 4,0 4,0z"></path></g></g><g style="display: block;" transform="matrix(1,0,0,1,0,96)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,1238,267.3630065917969)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M5,0 C5,-2.760999917984009 2.760999917984009,-5 0,-5 C-2.760999917984009,-5 -5,-2.760999917984009 -5,0 C-5,2.760999917984009 -2.760999917984009,5 0,5 C2.760999917984009,5 5,2.760999917984009 5,0z"></path></g><g opacity="1" transform="matrix(1,0,0,1,1238,267.3630065917969)"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M5,0 C5,-2.760999917984009 2.760999917984009,-5 0,-5 C-2.760999917984009,-5 -5,-2.760999917984009 -5,0 C-5,2.760999917984009 -2.760999917984009,5 0,5 C2.760999917984009,5 5,2.760999917984009 5,0z M0,4 C2.2090001106262207,4 4,2.2090001106262207 4,0 C4,0 6,0 6,0 C6,3.313999891281128 3.313999891281128,6 0,6 C0,6 0,4 0,4z M-4,0 C-4,2.2090001106262207 -2.2090001106262207,4 0,4 C0,4 0,6 0,6 C-3.313999891281128,6 -6,3.313999891281128 -6,0 C-6,0 -4,0 -4,0z M0,-4 C-2.2090001106262207,-4 -4,-2.2090001106262207 -4,0 C-4,0 -6,0 -6,0 C-6,-3.313999891281128 -3.313999891281128,-6 0,-6 C0,-6 0,-4 0,-4z M4,0 C4,-2.2090001106262207 2.2090001106262207,-4 0,-4 C0,-4 0,-6 0,-6 C3.313999891281128,-6 6,-3.313999891281128 6,0 C6,0 4,0 4,0z"></path></g></g><g style="display: block;" transform="matrix(1,0,0,1,720.5,199.5)" opacity="0.25"><g opacity="1" transform="matrix(1,0,0,1,-493.5,-96.5)"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M0.5034999847412109,-72 C0.5034999847412109,-72 0.5034999847412109,72 0.5034999847412109,72 C0.5034999847412109,72 -0.5034999847412109,72 -0.5034999847412109,72 C-0.5034999847412109,72 -0.5034999847412109,-72 -0.5034999847412109,-72 C-0.5034999847412109,-72 0.5034999847412109,-72 0.5034999847412109,-72z"></path></g></g><g style="display: block;" transform="matrix(1,0,0,0.449995219707489,924,107.3241958618164)" opacity="0.25"><g opacity="1" transform="matrix(1,0,0,1,-493.5,-96.5)"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M0.5034999847412109,-72 C0.5034999847412109,-72 0.5034999847412109,72 0.5034999847412109,72 C0.5034999847412109,72 -0.5034999847412109,72 -0.5034999847412109,72 C-0.5034999847412109,72 -0.5034999847412109,-72 -0.5034999847412109,-72 C-0.5034999847412109,-72 0.5034999847412109,-72 0.5034999847412109,-72z"></path></g></g><g style="display: block;" transform="matrix(1,0,0,1.2899999618530273,1329,248.864990234375)" opacity="0.25"><g opacity="1" transform="matrix(1,0,0,1,-493.5,-96.5)"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M0.5034999847412109,-72 C0.5034999847412109,-72 0.5034999847412109,72 0.5034999847412109,72 C0.5034999847412109,72 -0.5034999847412109,72 -0.5034999847412109,72 C-0.5034999847412109,72 -0.5034999847412109,-72 -0.5034999847412109,-72 C-0.5034999847412109,-72 0.5034999847412109,-72 0.5034999847412109,-72z"></path></g></g><g style="display: block;" transform="matrix(1,0,0,2.2699999809265137,1732,413.9949951171875)" opacity="0.25"><g opacity="1" transform="matrix(1,0,0,1,-493.5,-96.5)"><path fill="rgb(58,58,31)" fill-opacity="1" d=" M0.5034999847412109,-72 C0.5034999847412109,-72 0.5034999847412109,72 0.5034999847412109,72 C0.5034999847412109,72 -0.5034999847412109,72 -0.5034999847412109,72 C-0.5034999847412109,72 -0.5034999847412109,-72 -0.5034999847412109,-72 C-0.5034999847412109,-72 0.5034999847412109,-72 0.5034999847412109,-72z"></path></g></g></g></svg>
+
+                <div class="text-area">
+                    <div class="text-box text-box1">
+                        <span class="text1 graph-text1">DECORLUX®</span>
+                        <span class="text1 graph-text1">NRC 0.60 -> 0.75</span>
+                    </div>
+                    <div class="text-box text-box2">
+                        <span class="text1 graph-text2">A_01</span>
+                    </div>
+                    <div class="text-box text-box3">
+                        <span class="text1 graph-text3">D_02</span>
+                        <span class="text1 graph-text graph-text4">NRC<br>0.60</span>
+                    </div>
+                    <div class="text-box text-box4">
+                        <span class="text1 graph-text5">S_03</span>
+                        <span class="text1 graph-text graph-text6">NRC<br>0.75</span>
+                    </div>
+                    <div class="text-box text-box5">
+                        <span class="text1 graph-text7">R_04</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- @음향 제품 section4 -->
+        <section class="section section4">
+            <div class="inner">
+                <div class="group-headline">
+                    <h2 class="headline">ACOUSTIC PRODUCTS</h2>
+
+                    <div class="desc-area">
+                        <div class="desc-wrap">
+                            <p class="desc">Uncompromising excellence at speed. Built to exacting standards, with a 99 year guarantee.</p>
+                        </div>
+
+                        <button class="btn-all" aria-label="더 보기">
+                            <span class="btn-text btn-text1">View All</span>
+                            <span class="btn-text btn-text2">Products</span>
+                            <span class="arrow">
+                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group-content">
+                    <ul class="content-list">
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area img-area1">
+                                    <img src="./assets/images/section4_img1.webp" alt>
+                                </div>
+                                <p class="title">Style</p>
+                                <div class="text-area">
+                                    <div class="text-box">
+                                        <span class="text1">Category</span>
+                                        <span class="text2">PANELS</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">Fire Rating</span>
+                                        <span class="text2">GROUP 1, 2 OR  3</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">SOUND PROFILE</span>
+                                        <span class="text2">DECORATIVE</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area">
+                                    <img src="./assets/images/section4_img2.avif" alt>
+                                </div>
+                                <p class="title">Slat</p>
+                                <div class="text-area">
+                                    <div class="text-box">
+                                        <span class="text1">Category</span>
+                                        <span class="text2">SLATS</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">Fire Rating</span>
+                                        <span class="text2">GROUP 1, 2 OR  3</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">SOUND PROFILE</span>
+                                        <span class="text2">NRC - 0.75</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area">
+                                    <img src="./assets/images/section4_img3.webp" alt>
+                                </div>
+                                <p class="title">Ali</p>
+                                <div class="text-area">
+                                    <div class="text-box">
+                                        <span class="text1">Category</span>
+                                        <span class="text2">SLATS</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">Fire Rating</span>
+                                        <span class="text2">NON-COMBUSTIBLE</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">SOUND PROFILE</span>
+                                        <span class="text2">NRC - 0.45</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area img-area1">
+                                    <img src="./assets/images/section4_img4.webp" alt>
+                                </div>
+                                <p class="title">Tone</p>
+                                <div class="text-area">
+                                    <div class="text-box">
+                                        <span class="text1">Category</span>
+                                        <span class="text2">PANELS</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">Fire Rating</span>
+                                        <span class="text2">GROUP 3</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">SOUND PROFILE</span>
+                                        <span class="text2">DIFFUSER</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area">
+                                    <img src="./assets/images/section4_img5.webp" alt>
+                                </div>
+                                <p class="title">Vogl</p>
+                                <div class="text-area">
+                                    <div class="text-box">
+                                        <span class="text1">Category</span>
+                                        <span class="text2">PANELS</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">Fire Rating</span>
+                                        <span class="text2">GROUP 1 OR NON-COMBUSTIBLE</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">SOUND PROFILE</span>
+                                        <span class="text2">NRC - 0.85</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area">
+                                    <img src="./assets/images/section4_img6.webp" alt>
+                                </div>
+                                <p class="title">Milano</p>
+                                <div class="text-area">
+                                    <div class="text-box">
+                                        <span class="text1">Category</span>
+                                        <span class="text2">PANELS</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">Fire Rating</span>
+                                        <span class="text2">GROUP 3</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="text1">SOUND PROFILE</span>
+                                        <span class="text2">DECORATIVE</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </section>
+
+        <!-- @영감은 여기에 있습니다 section5 -->
+        <section class="section section5">
+            <div class="inner">
+                <div class="group-headline">
+                    <h2 class="headline">INSPIRATION LIVES HERE</h2>
+
+                    <div class="desc-area">
+                        <div class="desc-wrap">
+                            <p class="desc">Idea’s, musings and insights from our global collective.</p>
+                        </div>
+
+                        <button class="btn-all" aria-label="더 보기">
+                            <span class="btn-text btn-text1">View All</span>
+                            <span class="btn-text btn-text2">Articles</span>
+                            <span class="arrow">
+                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+                <div class="group-content">
+                    <ul class="content-list">
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area">
+                                    <img src="./assets/images/section5_img1.avif" alt>
+                                </div>
+                                <div class="title-area">
+                                    <p class="title">Revolutionising Acoustic Excellence with Diffuser Panels</p>
+                                    <p class="desc">Explore the world of diffuser panels and discover DecorTone by Decor Systems, a premium acoustic solution designed to scatter sound waves with precision. Learn about the ideal applications and innovative features of DecorTone, redefining sound management in various environments from music rooms to call centres.</p>
+                                    <span class="text1 text2">Learn</span>
+                                    <span class="text1 text3">5 Mar 2024</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area">
+                                    <img src="./assets/images/section5_img2.webp" alt>
+                                </div>
+                                <div class="title-area">
+                                    <p class="title">Flexible and High-Performing Acoustic Panels</p>
+                                    <p class="desc">Unlock design possibilities with DecorLini, the ultimate solution for flexible and high-performing acoustic panels. Seamlessly transitioning between flat and curved applications, DecorLini offers versatile design options for classrooms and medical centres. Read more about this all-rounder acoustic solution.</p>
+                                    <span class="text1 text2">Design</span>
+                                    <span class="text1 text3">27 Feb 2024</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="content-item">
+                            <a href="">
+                                <div class="img-area">
+                                    <img src="./assets/images/section5_img3.webp" alt>
+                                </div>
+                                <div class="title-area">
+                                    <p class="title">Integrating Acoustics with Cross-Laminated Timber (CLT) in Modern Architecture</p>
+                                    <p class="desc">Explore the realm of Cross-Laminated Timber (CLT) in modern architecture through our in-depth overview. Learn how our acoustic panels seamlessly integrate with CLT structures, enhancing both aesthetics and functionality. Uncover the synergy between CLT and acoustic design for a harmonious and innovative architectural experience.</p>
+                                    <span class="text1 text2">Learn</span>
+                                    <span class="text1 text3">31 Jan 2024</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="group-footer">
+            <div class="inner">
+                <div class="line-area line-area1"></div>
+                <div class="line-area line-area2"></div>
+                <div class="logo-area ft-area">
+                    <h2 class="ft-logo">
+                        <span class="blind">DECOR SYSTEMS 푸터 로고</span>
+                        <svg class="logo" viewBox="0 0 64 64" fill="none"><path d="M63.93 30.1793H63.9983V0H31.999V0.0690724C49.052 0.0690724 62.9842 13.3921 63.93 30.1793Z" fill="currentColor"></path><path d="M63.9315 33.8208C62.9858 50.608 49.0536 63.931 32.0006 63.931V64.0001H63.9999V33.8208H63.9315Z" fill="currentColor"></path><path d="M31.9309 30.1793H31.9993V0H0V0.0690724C17.053 0.0690724 30.9852 13.3921 31.9309 30.1793Z" fill="currentColor"></path><path d="M31.9309 33.8208C30.9852 50.608 17.053 63.931 0 63.931V64.0001H31.9993V33.8208H31.9309Z" fill="currentColor"></path></svg>
+                    </h2>
+
+                    <form action="" method="get">
+                        <fieldset>
+                            <legend class="blind">검색</legend>
+                            <label for="email">Subscribe to our newsletter</label>
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                            <div class="input-box">
+                                <input type="email" class="email" placeholder="Email address">
+                                <button class="btn-all" aria-label="더 보기">
+                                    <span class="arrow">
+                                        <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                        <svg class="icon-0-3-42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor" fill="transparent"></polyline><line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line></svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="text-area ft-area">
+                    <p class="text">Decor Systems acknowledges and pays respect to the past, present and future Traditional Custodians and Elders of Australia and the continuation of cultural, spiritual and educational practices of Aboriginal and Torres Strait Islander peoples.</p>
+                </div>
+
+                <div class="sns-area ft-area">
+                    <span class="text1">Social</span>
+                    
+                    <ul class="sns-list ft-list">
+                        <li class="sns-item">
+                            <a href=""><span class="text2 ft-text2">Instagram</span></a>
+                        </li>
+                        <li class="sns-item">
+                            <a href=""><span class="text2 ft-text2">Facebook</span></a>
+                        </li>
+                        <li class="sns-item">
+                            <a href=""><span class="text2 ft-text2">LinkedIn</span></a>
+                        </li>
+                        <li class="sns-item">
+                            <a href=""><span class="text2 ft-text2">Pinterest</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="copy-area ft-area">
+                    <div class="copy-wrap">
+                        <a href=""><img src="./assets/images/ft_ic_img1.svg" alt></a>
+                        <a href=""><img src="./assets/images/ft_ic_img2.svg" alt></a>
+                        <div class="img-box"><img src="./assets/images/ft_ic_img3.svg" alt></div>
+                        <div class="img-box"><img src="./assets/images/ft_ic_img4.svg" alt></div>
+                        <div class="img-box"><img src="./assets/images/ft_ic_img5.svg" alt></div>
+                        <div class="img-box"><img src="./assets/images/ft_ic_img6.svg" alt></div>
+                    </div>
+
+                    <span class="text2">© Decor Systems 2022</span>
+                </div>
+
+
+                <div class="products-area ft-area">
+                    <a href=""><span class="text1 ft-text1">Products</span></a>
+
+                    <ul class="products-list ft-list">
+                        <li class="products-item"><a href=""><span class="text2 ft-text2">Panels</span></a></li>
+                        <li class="products-item"><a href=""><span class="text2 ft-text2">Slats</span></a></li>
+                        <li class="products-item"><a href=""><span class="text2 ft-text2">Designer</span></a></li>
+                        <li class="products-item"><a href=""><span class="text2 ft-text2">Accessories</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="projects-area ft-area">
+                    <a href=""><span class="text1 ft-text1">Projects</span></a>
+
+                    <ul class="projects-list ft-list">
+                        <li class="projects-item"><a href=""><span class="text2 ft-text2">Health and Aged Care</span></a></li>
+                        <li class="projects-item"><a href=""><span class="text2 ft-text2">Arts and Community</span></a></li>
+                        <li class="projects-item"><a href=""><span class="text2 ft-text2">Commercial</span></a></li>
+                        <li class="projects-item"><a href=""><span class="text2 ft-text2">Education</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-area ft-area">
+                    <span class="text1">Contact</span>
+
+                    <ul class="contact-list ft-list">
+                        <li class="contact-item"><a href="tel: 0000 000 000"><span class="text2 ft-text2">1800 835 035</span></a></li>
+                        <li class="contact-item"><a href="mailto:letstalk@decorsystems.com.au"><span class="text2 ft-text2">letstalk@decorsystems.com.au</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="resources-area ft-area">
+                    <a href=""><span class="text1 ft-text1">Resources</span></a>
+
+                    <ul class="resources-list ft-list">
+                        <li class="resources-item"><a href=""><span class="text2 ft-text2">Privacy Policy</span></a></li>
+                        <li class="resources-item"><a href=""><span class="text2 ft-text2">Terms of Sale</span></a></li>
+                        <li class="resources-item"><a href=""><span class="text2 ft-text2">Work With Us</span></a></li>
+                        <li class="resources-item"><a href=""><span class="text2 ft-text2">DSA End-of-Life Policy</span></a></li>
+                        <li class="resources-item"><a href=""><span class="text2 ft-text2">Modern Slavery Statement</span></a></li>
+                        <li class="resources-item"><a href=""><span class="text2 ft-text2">Supplier Code of Conduct</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="fixed-toolbar">
+        <div class="toolbar-area">
+            <div class="page-wrap">
+                <span class="text1">PAGE</span>
+                <span class="text2">Decor Systems</span>
+            </div>
+            
+            <div class="empty-wrap"></div>
+
+            <div class="service-wrap">
+                <div class="service-box chat-box">
+                    <a href="">
+                        <span class="text2">Chat online</span>
+                        <svg class="closeIcon-0-3-514" width="13" height="14" viewBox="0 0 13 14" fill="none"><path d="M10.9 1.5H2.1C1.495 1.5 1 1.995 1 2.6V12.5L3.2 10.3H10.9C11.505 10.3 12 9.805 12 9.2V2.6C12 1.995 11.505 1.5 10.9 1.5Z" stroke="currentColor" stroke-width="1.2"></path></svg>
+                    </a>
+                </div>
+
+                <div class="service-box quote-box">
+                    <a href="">
+                        <span class="text2">Request a quote</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
