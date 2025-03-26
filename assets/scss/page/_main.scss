@@ -16,8 +16,9 @@
         line-height: 0.9;
         margin: 0 25px;
         @include tablet{
+            padding-top: 90vw;
             padding-bottom: 25px;
-            margin: 300px 15px 0;
+            margin: 0 15px;
         }
         .headline{
             position: relative;
@@ -189,13 +190,12 @@
             grid-template-columns: repeat(7, 1fr);
             grid-gap: 25px;
             position: absolute;
-            top: 0;
+            top: 50px;
             left: 0;
             width: 100%;
-            margin: 50px 25px 0;
             @include tablet{
                 grid-template-columns: repeat(4, 1fr);
-                margin: 30px 15px 0;
+                top: 30px;
             }
             .text1{
                 grid-column: 5/7;
@@ -203,6 +203,7 @@
                 opacity: 1;
                 @include tablet{
                     grid-column: span 2;
+                    padding-left: 25px;
                 }
             }
         }
@@ -658,8 +659,7 @@
             }
             .text-area{
                 display: flex;
-                grid-gap: 15px;
-                margin: 0 -30px;
+                grid-gap: 50px;
                 @include tablet{
                     display: grid;                    
                     grid-template-columns: 1fr 1fr;
@@ -668,9 +668,8 @@
                     display: flex;
                     flex-direction: column;
                     font-size: 10px;
-                    margin: 0 30px;
                     .text1{
-                        transition: opacity 0.15s ease-in-out;
+                        transition: opacity 0.15s;
                     }
                     .text2{
                         font-size: 10px;

@@ -14,7 +14,6 @@ $(function(){
     },'a')
 
     $(window).scroll(function(){
-
         curr = $(this).scrollTop();
 
         if (curr > 50) {
@@ -27,15 +26,20 @@ $(function(){
 
 
     // tablet
-    // side-gnb
-    $('.gnb .btn-menu').click(function(){
+    // side-gnb, side-gnb nav-item
+    $('.gnb .menu-item button').click(function () {
         $('.side-gnb').toggleClass('active1');
-    }) 
-    
-    // second-gnb
-    $('.side-gnb .nav-item').click(function(){
-        
-    })
+        $('.gnb .btn-menu, .gnb .btn-close').toggleClass('active1');
+        $('.header').toggleClass('on');
+
+        gsap.from('.side-gnb .nav-item', {
+            duration: 1,
+            opacity: 0,
+            stagger: 0.3,
+            delay: 0.5,
+        });
+    });
+
 
     // footer
     // footer group-footer, line-area::before

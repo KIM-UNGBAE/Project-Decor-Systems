@@ -176,7 +176,6 @@ $(function(){
     // section3
     // svg
     content = gsap.timeline({})
-
     content.from('.section3 .group-content svg',{
         scrollTrigger:{
             trigger:'.group-content svg',                
