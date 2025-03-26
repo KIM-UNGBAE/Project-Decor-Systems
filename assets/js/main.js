@@ -174,19 +174,8 @@ $(function(){
 
 
     // section3
-    // svg
-    content = gsap.timeline({})
-    content.from('.section3 .group-content svg',{
-        scrollTrigger:{
-            trigger:'.group-content svg',                
-            start:"0% 70%",
-            end:"100% 100%",
-        },
-        scaleY:0,
-    },'b');
-
     // text-box
-    content.from('.section3 .text-area .text-box',{
+    gsap.from('.section3 .text-area .text-box',{
         scrollTrigger:{
             trigger:'.text-area .text-box',                
             start:"0% 70%",
@@ -197,7 +186,7 @@ $(function(){
         },
         delay:1,
         opacity:0,
-    },'b');
+    });
 
 
     // section4
