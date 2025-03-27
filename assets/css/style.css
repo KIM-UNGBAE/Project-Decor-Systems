@@ -280,13 +280,13 @@ body {
   transform: scaleX(0);
 }
 .header.on {
-  transform: translateY(-24px);
+  height: 50px;
 }
 .header.on::before {
   transform: scaleX(1);
 }
 .header.on .gnb {
-  transform: translateY(12px);
+  transform: translateY(-12px);
 }
 .header.on svg {
   width: 86.1px;
@@ -778,7 +778,6 @@ body {
     overflow-y: scroll;
     -ms-overflow-style: none; /* IE, Edge */
     scrollbar-width: none; /* Firefox */
-    z-index: 150;
   }
   .side-gnb ::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
