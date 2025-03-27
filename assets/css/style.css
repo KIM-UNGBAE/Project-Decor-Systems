@@ -768,10 +768,10 @@ body {
   .side-gnb {
     display: block;
     position: fixed;
-    top: 74px;
+    top: 50px;
     right: -100%;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     visibility: hidden;
     background: #fff;
     transition: 0.5s;
@@ -849,9 +849,14 @@ body {
 }
 @media (max-width: 1023px) {
   .section1 .group-headline {
-    padding-top: 90vw;
+    padding-top: 44vw;
     padding-bottom: 25px;
     margin: 0 15px;
+  }
+}
+@media (max-width: 600px) {
+  .section1 .group-headline {
+    padding-top: 95vw;
   }
 }
 .section1 .group-headline .headline {
