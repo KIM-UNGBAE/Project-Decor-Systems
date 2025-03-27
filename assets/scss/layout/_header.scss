@@ -22,7 +22,6 @@
     }
     &.on{
         height: 50px;
-        // transform: translateY(-24px);
         &::before{
             transform: scaleX(1);
         }
