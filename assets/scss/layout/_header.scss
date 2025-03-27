@@ -21,12 +21,12 @@
         transform: scaleX(0);
     }
     &.on{
-        transform: translateY(-28px);
+        transform: translateY(-24px);
         &::before{
             transform: scaleX(1);
         }
         .gnb{
-            transform: translateY(14px);
+            padding-top: 24px;
         }
         svg{
             width: 86.1px;
