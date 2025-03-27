@@ -1,11 +1,10 @@
 // gnb
 .gnb{
     padding: 12px 0;
-    z-index: 150;
     .nav-list{
         display: flex;
         justify-content: space-between;
-        gap: 12.5px;
+        gap: 12px;
         .nav-item{
             flex: 1;
             a{
@@ -56,6 +55,7 @@
             }
         }
         .menu-item{
+            display: none;
             @include tablet{
                 display: flex;
                 justify-content: flex-end;

@@ -30,7 +30,7 @@ $(function(){
     $('.gnb .menu-item button').click(function () {
         $('.side-gnb').toggleClass('active1');
         $('.gnb .btn-menu, .gnb .btn-close').toggleClass('active1');
-        $('.header').toggleClass('on');
+        $('.header').addClass('on');
 
         gsap.from('.side-gnb .nav-item', {
             duration: 1,

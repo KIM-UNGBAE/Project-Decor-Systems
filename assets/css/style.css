@@ -661,12 +661,11 @@ body {
 
 .gnb {
   padding: 12px 0;
-  z-index: 150;
 }
 .gnb .nav-list {
   display: flex;
   justify-content: space-between;
-  gap: 12.5px;
+  gap: 12px;
 }
 .gnb .nav-list .nav-item {
   flex: 1;
@@ -719,6 +718,9 @@ body {
 }
 .gnb .nav-list .gnb-item .nav .nav-text:hover::after {
   width: 100%;
+}
+.gnb .nav-list .menu-item {
+  display: none;
 }
 @media (max-width: 1023px) {
   .gnb .nav-list .menu-item {
