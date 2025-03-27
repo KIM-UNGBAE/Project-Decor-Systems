@@ -286,7 +286,7 @@ body {
   transform: scaleX(1);
 }
 .header.on .gnb {
-  padding-top: 24px;
+  transform: translateY(12px);
 }
 .header.on svg {
   width: 86.1px;
